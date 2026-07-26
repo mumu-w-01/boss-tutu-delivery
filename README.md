@@ -1,4 +1,6 @@
-# 兔兔投递（Chrome 扩展 MVP · v0.1.61）
+# 兔兔投递（Chrome 扩展 MVP · v0.1.62）
+
+0.1.62 重构公开产品介绍页：提供一键下载入口、四项功能图解（分析与投递、批量投递、岗位库、模型配置）和三步安装教程；GitHub Pages 可直接公开访问。
 
 0.1.61 批量生成改用专用招呼语提示词，只返回 3 条可发送的招呼语，不再输出岗位匹配分析和能力评分；单个分析仍保留完整匹配结果。
 
@@ -60,7 +62,9 @@
 
 ## ✨ 产品介绍
 
-[打开兔兔投递产品介绍页](product.html)
+[打开 GitHub Pages 产品介绍页](https://mumu-w-01.github.io/boss-tutu-delivery/)
+
+[下载最新安装包](https://github.com/mumu-w-01/boss-tutu-delivery/releases/latest)
 
 ## 🚀 安装
 
