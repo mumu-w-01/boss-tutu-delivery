@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="兔兔投递：在 BOSS 直聘上分析岗位、生成招呼语并管理投递记录的 Chrome 扩展。">
+  <title>兔兔投递｜BOSS 直聘求职助手</title>
+  <link rel="stylesheet" href="product.css">
+</head>
+<body>
+  <main>
+    <nav class="topbar">
+      <a class="brand" href="#top"><img src="icons/icon48.png" alt="兔兔投递图标"><span>兔兔投递</span></a>
+      <a class="nav-link" href="#install">安装教程</a>
+    </nav>
+
+    <header id="top" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Chrome 扩展 · BOSS 直聘求职助手</p>
+        <h1>打开岗位页，<br>一站完成<span>分析、招呼语和投递。</span></h1>
+        <p class="lead">兔兔投递会读取岗位 JD，用你的简历生成更有针对性的招呼语，并帮你批量管理投递记录。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="https://github.com/mumu-w-01/boss-tutu-delivery/releases/latest/download/tutu-delivery-v0.1.63.zip">↓ 下载兔兔投递</a>
+          <a class="button secondary" href="#install">查看安装方法</a>
+        </div>
+        <p class="hint">免费使用 · 需要你自己的 AI API Key</p>
+      </div>
+      <div class="hero-preview"><img src="assets/landing/feature-analysis.png" alt="兔兔投递在 BOSS 职位详情页分析岗位并生成招呼语"></div>
+    </header>
+
+    <section class="section" id="features">
+      <div class="section-title">
+        <p class="eyebrow">四个核心功能</p>
+        <h2>从看到岗位，到有条理地投递</h2>
+        <p>不用复制 JD，不用在多个页面之间来回切换。</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <img src="assets/landing/feature-analysis.png" alt="分析当前岗位与生成招呼语">
+          <div><span>01</span><h3>分析与投递</h3><p>读取当前岗位的 JD，结合简历提炼重点，生成可直接修改的招呼语。</p></div>
+        </article>
+        <article class="feature-card">
+          <img src="assets/landing/feature-batch.png" alt="批量生成招呼语和开始投递">
+          <div><span>02</span><h3>批量投递</h3><p>先把岗位加入清单，批量生成招呼语后，逐岗自动完成投递流程。</p></div>
+        </article>
+        <article class="feature-card">
+          <img src="assets/landing/feature-library.png" alt="岗位库记录已投递岗位">
+          <div><span>03</span><h3>岗位库</h3><p>成功投递会自动归档，可查看公司、岗位、时间和状态，也支持导出 Excel 兼容 CSV。</p></div>
+        </article>
+        <article class="feature-card">
+          <img src="assets/landing/feature-settings.png" alt="配置 AI 地址模型和 API Key">
+          <div><span>04</span><h3>配置自己的模型</h3><p>填写你自己的 OpenAI 兼容 API 地址、模型名称和 API Key，简历与密钥只保存在本机。</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="install" class="section install-section">
+      <div class="section-title">
+        <p class="eyebrow">三步安装</p>
+        <h2>下载后，三分钟开始使用</h2>
+      </div>
+      <div class="install-steps">
+        <article>
+          <div class="step-number">1</div>
+          <div class="install-copy"><h3>下载并解压</h3><p>点击上方“下载兔兔投递”，解压 ZIP 文件，保留其中的“职投助手”文件夹。</p></div>
+          <img src="assets/landing/install-download.png" alt="在下载目录找到兔兔投递压缩包">
+        </article>
+        <article>
+          <div class="step-number">2</div>
+          <div class="install-copy"><h3>打开扩展程序</h3><p>在 Chrome 地址栏打开 <code>chrome://extensions</code>，开启右上角的“开发者模式”。</p></div>
+          <img src="assets/landing/install-unzip.png" alt="解压后的职投助手文件夹">
+        </article>
+        <article>
+          <div class="step-number">3</div>
+          <div class="install-copy"><h3>加载已解压的扩展程序</h3><p>点击“加载已解压的扩展程序”，选择解压后的“职投助手”文件夹即可。</p></div>
+          <img src="assets/landing/install-load.png" alt="Chrome 加载已解压的扩展程序">
+        </article>
+      </div>
+    </section>
+
+    <section class="cta">
+      <img src="icons/icon128.png" alt="兔兔投递图标">
+      <div><h2>准备好开始更有条理地投递了吗？</h2><p>下载扩展后，在设置中填写 AI API Key，再打开任意 BOSS 岗位页即可使用。</p></div>
+      <a class="button primary" href="https://github.com/mumu-w-01/boss-tutu-delivery/releases/latest/download/tutu-delivery-v0.1.63.zip">立即下载</a>
+    </section>
+
+    <footer><span>兔兔投递 · 打开岗位 → 分析 → 确认发送</span><a href="README.md">查看项目说明</a><a href="https://github.com/mumu-w-01/boss-tutu-delivery">GitHub</a></footer>
+  </main>
+</body>
+</html>
