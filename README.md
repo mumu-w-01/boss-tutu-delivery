@@ -1,41 +1,107 @@
-# 兔兔投递（Chrome 扩展 MVP · v0.1.64）
+<div align="center">
 
-> 在 BOSS 直聘打开岗位页，兔兔投递帮你读取 JD、结合简历生成招呼语，并把投递记录整理成岗位库。
+# 🐰 兔兔投递 · Tutu Delivery
 
-[查看产品介绍页](https://mumu-w-01.github.io/boss-tutu-delivery/) · [下载最新安装包](https://github.com/mumu-w-01/boss-tutu-delivery/releases/latest)
+### 让每一次投递，都更有把握。
+### Make every job application count.
 
-## ✨ 能做什么
+[![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-4285F4?logo=googlechrome&logoColor=white)](https://www.google.com/chrome/)
+[![Platform](https://img.shields.io/badge/Platform-BOSS%20%E7%9B%B4%E8%81%98-ff6b35)](https://www.zhipin.com/)
+[![Status](https://img.shields.io/badge/Status-Early%20Access-7c3aed)](https://github.com/mumu-w-01/boss-tutu-delivery/releases/latest)
 
-- **分析当前岗位**：自动读取标题、公司、地点、薪资和 JD，提炼 JD 最看重的能力。
-- **生成招呼语**：使用你提供的真实简历内容，生成 150–200 字、可直接修改的中文招呼语。
-- **批量投递**：将岗位加入清单，批量生成招呼语后逐岗执行投递，并显示处理进度。
-- **岗位库**：成功投递自动归档，保留公司、岗位、时间、状态和链接，可导出 Excel 兼容 CSV。
-- **自选模型**：支持 OpenAI 兼容 API；简历和 API Key 存在 Chrome 本机存储中。
+[🌐 产品介绍页 / Product page](https://mumu-w-01.github.io/boss-tutu-delivery/) · [⬇️ 下载最新安装包 / Download](https://github.com/mumu-w-01/boss-tutu-delivery/releases/latest)
 
-## 🚀 安装
+</div>
 
-1. [下载最新 ZIP 安装包](https://github.com/mumu-w-01/boss-tutu-delivery/releases/latest)并解压。
-2. 在 Chrome 打开 `chrome://extensions`。
-3. 打开右上角“开发者模式”。
-4. 点击“加载已解压的扩展程序”。
-5. 选择解压后的 `职投助手` 文件夹。
-6. 点击工具栏蓝兔图标，侧边栏会打开。
+---
 
-## 🧭 使用流程
+## ✨ 一句话介绍 / One-liner
 
-1. ⚙️ 到「设置」填写 AI 地址、模型和 API Key，点击“测试连接”。
-2. 📄 上传简历图片或直接粘贴简历内容，点击“重新提取简历内容”后检查并保存。
-3. 🔎 打开 BOSS 职位详情页或列表页。
-4. ➕ 点击“加入投递清单”，或点击“分析当前岗位”生成招呼语。
-5. ✍️ 在招呼语区域查看 JD 与简历匹配结果；需要时修改要求后重新生成。
-6. 🚀 在投递清单点击“批量生成招呼语”，再点击“开始投递”。
-7. ✅ 投递成功后岗位会记录到岗位库，可导出 Excel 兼容 CSV。
+**兔兔投递**是一款面向 BOSS 直聘的 Chrome 求职助手：它读取岗位信息，用你的**真实简历**对照 JD，生成更有针对性的招呼语，并把每次投递沉淀成可回看的记录。
 
-## 📌 使用前请了解
+**Tutu Delivery** is a Chrome job-search assistant for BOSS 直聘. It reads a job description, compares it with your **real résumé**, drafts a focused opening message, and keeps a record of every application.
 
-- BOSS 页面会更新，沟通输入框或上传控件可能需要随页面变化调整选择器。
-- 简历图片在解析时会发送给你配置的 AI 服务；请使用你信任的服务商。
-- 自动发送仅在你点击确认后执行；发送完成后请在 BOSS 聊天页核对文字与图片状态。
+它不鼓励无差别海投。它想做的是：帮你为每一个值得的岗位，准备一段更真诚、更具体、也更像你的开场。
+
+This is not a mass-application bot. It helps you prepare a more genuine, specific introduction for each opportunity worth pursuing.
+
+## 📣 已被真实用户验证 / Validated in the wild
+
+| 指标 / Signal | 数据 / Result |
+| --- | --- |
+| 🎬 抖音内容播放量 / Douyin video plays | **60,000+** |
+| ❤️ 抖音点赞 / Douyin likes | **1,500+** |
+| 🌱 种子用户 / Seed users | **204** |
+
+这些数字来自围绕兔兔投递发布的自媒体内容与早期用户共创，说明「更认真地投递」是一个真实存在的需求。
+
+These results come from social content and early-user co-creation around Tutu Delivery—evidence that people want a more thoughtful way to apply.
+
+## 🎯 它帮你解决什么 / What it helps with
+
+| 以前 / Before | 现在 / With Tutu |
+| --- | --- |
+| 反复复制 JD，手动提炼重点 | 🐰 自动读取岗位标题、公司、地点、薪资与 JD |
+| 招呼语像泛泛的简历摘要 | 🎯 找出 JD 关键能力，用真实经历建立关联 |
+| 投过什么、说过什么很快忘记 | 🗂️ 集中保存岗位、招呼语和投递状态 |
+| 想效率更高，又不想失去真诚 | 💬 在发送前确认，保持你自己的表达 |
+
+## ⚡ 核心能力 / Core features
+
+- 🧾 **读取岗位信息 / Read job details** — 在 BOSS 职位列表或详情页提取关键信息。
+- 🧠 **简历 × JD 匹配 / Résumé–JD matching** — 从 JD 中识别最值得回应的能力点，并对照你的真实项目经历。
+- ✍️ **生成招呼语 / Draft opening messages** — 产出自然、具体、适合首轮沟通的消息；你始终拥有最终编辑权。
+- 📚 **岗位库 / Application library** — 归档岗位、招呼语、链接与状态，方便复盘与跟进。
+- 📤 **导出记录 / Export records** — 将投递记录导出为 Excel 兼容 CSV。
+- 🔐 **数据留在本机 / Local-first** — 支持 OpenAI 兼容 API；简历和 API Key 存在 Chrome 本机存储中。
+
+## 🪜 四步使用 / Four steps
+
+1. **打开岗位 / Open a role**：浏览 BOSS 直聘的职位列表或详情页。
+
+   Browse a role on BOSS 直聘.
+2. **加入或分析 / Save or analyse**：加入投递清单，或让兔兔读取并分析当前岗位。
+
+   Save it for later or analyse it right away.
+3. **生成并修改招呼语 / Draft and refine**：根据你的简历生成初稿；在发送前按你的语气调整。
+
+   Generate a first draft from your résumé, then make it yours.
+4. **确认投递 / Apply with intention**：发送后自动沉淀记录，下一次跟进更从容。
+
+   Send when ready and keep the application history for follow-up.
+
+## 💬 招呼语应该像这样 / The message should feel like this
+
+> 看过您对 AI 产品方向的要求，我对岗位中「推动产品落地」和跨团队协作尤其感兴趣。过去在项目管理中，我负责从需求梳理到交付推进，协调多方资源解决问题，并保证项目按计划落地。
+>
+> I was particularly drawn to the role’s focus on shipping AI products and cross-functional collaboration. In my previous project work, I owned the path from requirements to delivery, coordinated stakeholders, and kept execution on track.
+
+不是把简历全文搬进聊天框，而是选择一两项最相关的真实经历，清楚地说明「为什么是你」。
+
+Not a résumé pasted into chat—just one or two relevant, honest examples that make the case for why you.
+
+## 🚀 安装 / Install
+
+1. [下载最新 ZIP 安装包 / Download the latest ZIP](https://github.com/mumu-w-01/boss-tutu-delivery/releases/latest)，并解压。
+2. 在 Chrome 打开 `chrome://extensions`，开启右上角的「开发者模式 / Developer mode」。
+3. 点击「加载已解压的扩展程序 / Load unpacked」，选择解压后的 `职投助手` 文件夹。
+4. 点击工具栏中的蓝兔图标，开始设置并使用。
+
+## 📌 使用前请了解 / Before you begin
+
+- 🤝 **真实优先 / Authentic first**：只基于你提供的简历与经历生成内容；发送前始终由你审阅、修改和确认。
+- 🔐 **保护隐私 / Respect privacy**：简历图片在解析时会发送给你配置的 AI 服务；请使用你信任的服务商。
+- ⚠️ **保持核对 / Stay attentive**：BOSS 页面会更新，发送完成后请在 BOSS 聊天页核对文字与图片状态。
+
+## 🌱 Get involved / 参与共创
+
+兔兔投递正在早期迭代中。欢迎提出你在求职、岗位筛选、招呼语或投递追踪中的真实痛点。
+
+Tutu Delivery is evolving with early users. Feedback on job discovery, message writing, application tracking, or your own job-search pain points is very welcome.
+
+- 🐛 [反馈问题 / Report an issue](https://github.com/mumu-w-01/boss-tutu-delivery/issues)
+- 💡 [提出想法 / Share an idea](https://github.com/mumu-w-01/boss-tutu-delivery/issues/new)
+- ⭐ 如果它对你有帮助，欢迎 Star 支持 / Star the project if it helps
 
 ## 更新记录
 
