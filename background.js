@@ -4,7 +4,8 @@ const DEFAULTS = {
   apiKey: "",
   candidateProfile: "",
   greetingPrompt: "",
-  resumeImages: []
+  resumeImages: [],
+  sendResume: true
 };
 
 chrome.runtime.onInstalled.addListener(() => {
@@ -261,8 +262,10 @@ async function runQueue() {
           if (!retryOpen?.ok) throw new Error(retryOpen?.error || "沟通页未跳转，重试点击失败");
           await waitForTab(tabId, "/web/geek/chat");
         }
-        await updateQueueItem(item.key, { progress: "正在发送招呼语和简历图片" });
-        const sent = await sendToTab(tabId, { type: "SEND_MESSAGE", greeting: item.greeting, images: (await chrome.storage.local.get("config")).config?.resumeImages || [] });
+        const currentConfig = (await chrome.storage.local.get("config")).config || {};
+        const shouldSendResume = currentConfig.sendResume !== false;
+        await updateQueueItem(item.key, { progress: shouldSendResume ? "正在发送招呼语和简历图片" : "正在发送招呼语（不发送简历图片）" });
+        const sent = await sendToTab(tabId, { type: "SEND_MESSAGE", greeting: item.greeting, images: shouldSendResume ? (currentConfig.resumeImages || []) : [], sendResume: shouldSendResume });
         if (!sent?.ok) throw new Error(sent?.error || "发送失败");
         await saveJob({ ...item, status: "已沟通", sentAt: new Date().toLocaleString("zh-CN"), resumeStatus: sent.resume?.sent ? "简历图片已确认送达" : (sent.resume?.reason || "未发送") });
         // 岗位库已保存成功记录，待投递清单实时移除，避免和历史记录重复出现。

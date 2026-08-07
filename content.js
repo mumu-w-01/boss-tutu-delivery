@@ -306,8 +306,8 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
       (async () => {
         try {
           await prepareChatForSending();
-          // 先逐张确认简历图片已送达，再发送文字；若图片失败，避免出现“只发了招呼语、没发简历”的半成品投递。
-          const resume = await sendResume(message.images);
+          // 用户关闭简历发送时，明确跳过上传；默认仍保持先确认图片送达、再发送文字的可靠流程。
+          const resume = message.sendResume === false ? { sent: false, reason: "已设置为不发送简历图片" } : await sendResume(message.images);
           await delay(500);
           await sendGreetingAndConfirm(message.greeting);
           sendResponse({ ok: true, messageSent: true, resume });
